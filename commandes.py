@@ -1,5 +1,4 @@
 import streamlit as st  # pip install streamlit
-from deta import Deta
 
 def commandesf():
     # --- INPUT & SAVE VALEURS DOUANE ---
