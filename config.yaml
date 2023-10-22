@@ -1,0 +1,20 @@
+credentials:
+  usernames:
+    ailunga:
+      email: alingocl@gmail.com
+      name: Alain ILUNGA
+      password: abc # To be replaced with hashed password
+    rbriggs:
+      email: patshilunga@yahoo.fr
+      name: Patrick ILUNGA
+      password: def # To be replaced with hashed password
+cookie:
+  expiry_days: 30
+  key: Kinshasa # Must be string
+  name: visibility
+preauthorized:
+  emails:
+  - alingocl@gmail.com
+
+
+hashed_passwords = stauth.Hasher(['abc', 'def']).generate()

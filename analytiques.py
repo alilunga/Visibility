@@ -1,7 +1,7 @@
 import streamlit as st  # pip install streamlit
 
 
-def declarationsf():
+def analytiquesf():
     # --- INPUT & SAVE VALEURS DOUANE ---
 
     with st.form("Valeurs_Douane", clear_on_submit=True):
@@ -18,3 +18,4 @@ def declarationsf():
         submitted = st.form_submit_button("Enregistrer")
 
   
+
