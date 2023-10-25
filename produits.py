@@ -16,3 +16,12 @@ def produitsf():
         produit_dmd = st.number_input("Entrez la quantite en demande du produit")
         submitted = st.form_submit_button("Enregistrer")  
 
+def importf():
+
+      with st.form("produits", clear_on_submit=True):
+
+        st.write ("Licence d'importation")
+        produit_id = st.number_input("N° CLIENT BCC :")
+        produit_nom = st.text_input("Pays de provenance des biens")
+        submitted = st.form_submit_button("Enregistrer")  
+

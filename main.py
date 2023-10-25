@@ -6,7 +6,7 @@ from streamlit_option_menu import option_menu
 from accueil import accueilf
 from clients import clientsf
 from fournisseurs import fournisseursf
-from produits import produitsf
+from produits import *
 from achats import achatsf
 from ventes import ventesf
 from analytiques import analytiquesf
@@ -63,7 +63,12 @@ if authenticate_user():
     if selected == 'fournisseurs':
         fournisseursf()
     if selected == 'produits':
-        produitsf()
+        select_list=["Ajouter un produit", "Suppimer un produit", "Commander un produit", "Importer un produit"]
+        ret = st.selectbox("Action", select_list)
+        if ret == "Importer un produit":
+            importf()
+        else:
+            produitsf()
     if selected == 'achats':
         achatsf()
     if selected == 'ventes':
