@@ -1,8 +1,7 @@
 import streamlit as st  # pip install streamlit
 
 def produitsf():
-    # --- INPUT & SAVE VALEURS DOUANE ---
-
+    
    with st.form("produits", clear_on_submit=True):
 
         st.write ("Ajouter un produit")
@@ -20,8 +19,18 @@ def importf():
 
       with st.form("produits", clear_on_submit=True):
 
-        st.write ("Licence d'importation")
-        produit_id = st.number_input("N° CLIENT BCC :")
+        st.write ("Remplir sa Déclaration d’Importation des biens")
+        produit_id = st.number_input("Poste d'entree :")
+        produit_nom = st.text_input("Pays de provenance des biens")
+        produit_id = st.number_input("Nom du fournisseur etranger :")
+        produit_nom = st.text_input("Contact du fournisseur etranger:")
+        produit_id = st.number_input("Nom du beneficiaire du paiement :")
+        produit_nom = st.text_input("Contact du beneficiaire du paiement")
+        produit_id = st.number_input("Monnaie de la transaction :")
+        produit_nom = st.text_input("Montant FOB/CIF a repartir")
+        produit_id = st.number_input("Frais connexes :")
+        produit_nom = st.text_input("Modalites de paiement")
+        produit_id = st.number_input("Autres informations utiles :")
         produit_nom = st.text_input("Pays de provenance des biens")
         submitted = st.form_submit_button("Enregistrer")  
 
