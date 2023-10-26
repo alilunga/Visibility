@@ -1,4 +1,4 @@
-import streamlit as st  # pip install streamlit
+import streamlit as st
 
 def produitsf():
     
@@ -22,15 +22,15 @@ def importf():
         st.write ("Remplir sa Déclaration d’Importation des biens")
         produit_entree11 = st.number_input("Poste d'entree :")
         produit_origin12 = st.text_input("Pays de provenance des biens")
-        produit_id1 = st.number_input("Nom du fournisseur etranger :")
+        produit_id1 = st.text_input("Nom du fournisseur etranger :")
         produit_nom2 = st.text_input("Contact du fournisseur etranger:")
-        produit_id3 = st.number_input("Nom du beneficiaire du paiement :")
+        produit_id3 = st.text_input("Nom du beneficiaire du paiement :")
         produit_nom4 = st.text_input("Contact du beneficiaire du paiement")
         produit_id5 = st.number_input("Monnaie de la transaction :")
-        produit_nom6 = st.text_input("Montant FOB/CIF a repartir")
+        produit_nom6 = st.number_input("Montant FOB/CIF a repartir")
         produit_id7 = st.number_input("Frais connexes :")
         produit_nom8 = st.text_input("Modalites de paiement")
-        produit_id9 = st.number_input("Autres informations utiles :")
+        produit_id9 = st.text_input("Autres informations utiles :")
         produit_nom10 = st.text_input("Pays de provenance des biens")
         submitted = st.form_submit_button("Enregistrer")  
 
