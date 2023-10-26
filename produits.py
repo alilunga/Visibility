@@ -20,8 +20,8 @@ def importf():
       with st.form("produits", clear_on_submit=True):
 
         st.write ("Remplir sa Déclaration d’Importation des biens")
-        produit_entree = st.number_input("Poste d'entree :")
-        produit_origin = st.text_input("Pays de provenance des biens")
+        produit_entree11 = st.number_input("Poste d'entree :")
+        produit_origin12 = st.text_input("Pays de provenance des biens")
         produit_id1 = st.number_input("Nom du fournisseur etranger :")
         produit_nom2 = st.text_input("Contact du fournisseur etranger:")
         produit_id3 = st.number_input("Nom du beneficiaire du paiement :")
