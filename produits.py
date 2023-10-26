@@ -17,20 +17,19 @@ def produitsf():
 
 def importf():
 
-      with st.form("produits", clear_on_submit=True):
+      with st.form("import", clear_on_submit=True):
 
         st.write ("Remplir sa Déclaration d’Importation des biens")
-        produit_entree11 = st.number_input("Poste d'entree :")
-        produit_origin12 = st.text_input("Pays de provenance des biens")
-        produit_id1 = st.text_input("Nom du fournisseur etranger :")
-        produit_nom2 = st.text_input("Contact du fournisseur etranger:")
-        produit_id3 = st.text_input("Nom du beneficiaire du paiement :")
-        produit_nom4 = st.text_input("Contact du beneficiaire du paiement")
-        produit_id5 = st.number_input("Monnaie de la transaction :")
-        produit_nom6 = st.number_input("Montant FOB/CIF a repartir")
-        produit_id7 = st.number_input("Frais connexes :")
-        produit_nom8 = st.text_input("Modalites de paiement")
-        produit_id9 = st.text_input("Autres informations utiles :")
-        produit_nom10 = st.text_input("Pays de provenance des biens")
+        import_entree = st.number_input("Poste d'entree :")
+        import_origin = st.text_input("Pays de provenance des biens")
+        import_fournisseur = st.text_input("Nom du fournisseur etranger :")
+        import_contact = st.text_input("Contact du fournisseur etranger:")
+        import_beneficiaire = st.text_input("Nom du beneficiaire du paiement :")
+        import_bcontact = st.text_input("Contact du beneficiaire du paiement")
+        import_devise = st.number_input("Monnaie de la transaction :")
+        import_fob = st.number_input("Montant FOB/CIF a repartir")
+        import_fconnex = st.number_input("Frais connexes :")
+        import_paiement = st.text_input("Modalites de paiement")
+        import_autres = st.text_input("Autres informations utiles :")
         submitted = st.form_submit_button("Enregistrer")  
 
