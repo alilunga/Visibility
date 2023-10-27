@@ -11,7 +11,6 @@ def accueilf():
 
 
 #    deta=Deta(st.secrets["data_key"])
-
 #    if submitted:
 #        db.put({"name":name, "age":age})
 
