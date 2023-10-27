@@ -11,10 +11,10 @@ def accueilf():
         age = st.number_input("Ton age")
         submitted = st.form_submit_button("Enregistrer")
 
-    deta=Deta(st.secrets["data_key"])
+#    deta=Deta(st.secrets["data_key"])
 
-    if submitted:
-        db.put({"name":name, "age":age})
+#    if submitted:
+#        db.put({"name":name, "age":age})
 
-    db_content=db.fetch().items
-    st.write(db_content)
+#    db_content=db.fetch().items
+#    st.write(db_content)
