@@ -4,17 +4,17 @@ import streamlit as st  # pip install streamlit
 def accueilf():
     # --- INPUT & SAVE VALEURS DOUANE ---
 
-    with st.form("Valeurs_Douane", clear_on_submit=True):
+    with st.form("form", clear_on_submit=True):
 
-        st.write ("Remplir les valeurs douanieres")
-        nbl = st.number_input("Entrer Numero bulletin de liquidation")
-        nqc = st.number_input("Numero quittance")
-        dtp = st.number_input("Date de paiement")
-        ptf = st.number_input("Position tarifaire")
-        ust = st.number_input("Unite statique")
-        qte = st.number_input("Quantite")
-        ndc = st.text_input("Nom du declarant")
-        vld = st.number_input("Valeur en douane")
+        st.write ("Remplir")
+        name = st.text_input("Ton nom")
+        age = st.number_input("Ton age")
         submitted = st.form_submit_button("Enregistrer")
 
- 
+ deta=Deta(st.secrets["data_key"])
+
+ if submitted:
+     db.put({"name":name, "age":age})
+
+db_content=db.fetch().items
+st.write(db_content)
