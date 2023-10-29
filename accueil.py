@@ -9,7 +9,7 @@ def accueilf():
         age = st.number_input("Ton age")
         submitted = st.form_submit_button("Enregistrer")
 
-
+# comment
     deta = Deta(st.secrets["data_key"])
     db = deta.Base("visible")
     if submitted:
