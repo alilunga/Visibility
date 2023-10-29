@@ -10,7 +10,8 @@ def accueilf():
         submitted = st.form_submit_button("Enregistrer")
 
 # comment
-    deta = Deta(${{ secrets["DATA_KEY"] }})
+    hellof = ${{ secrets.DATA_KEY }}
+    deta = Deta(hellof)
     db = deta.Base("visible")
     if submitted:
         db.put({"name":name, "age":age})
