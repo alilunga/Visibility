@@ -1,4 +1,5 @@
 import streamlit as st
+from deta import Deta
 
 def produitsf():
     
@@ -32,4 +33,21 @@ def importf():
         import_paiement = st.text_input("Modalites de paiement")
         import_autres = st.text_input("Autres informations utiles :")
         submitted = st.form_submit_button("Enregistrer")  
+
+def xxxf():
+    with st.form("form", clear_on_submit=True):
+
+        st.write ("Remplir")
+        name = st.text_input("Ton nom")
+        age = st.number_input("Ton age")
+        submitted = st.form_submit_button("Enregistrer")
+
+
+    deta = Deta(st.secrets["data_key"])
+    db = deta.Base("visible")
+    if submitted:
+        db.put({"name":name, "age":age})
+
+    db_content = db.fetch().items
+    st.write(db_content)
 

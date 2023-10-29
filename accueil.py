@@ -1,5 +1,5 @@
 import streamlit as st  # pip install streamlit
-
+from deta import Deta
 
 def accueilf():
     with st.form("form", clear_on_submit=True):
@@ -10,9 +10,10 @@ def accueilf():
         submitted = st.form_submit_button("Enregistrer")
 
 
-#    deta=Deta(st.secrets["data_key"])
-#    if submitted:
-#        db.put({"name":name, "age":age})
+    deta = Deta(st.secrets["data_key"])
+    db = deta.Base("visible")
+    if submitted:
+        db.put({"name":name, "age":age})
 
-#    db_content=db.fetch().items
-#    st.write(db_content)
+    db_content = db.fetch().items
+    st.dataframe(db_content)
