@@ -15,5 +15,4 @@ def accueilf():
     if submitted:
         db.put({"name":name, "age":age})
 
-    db_content = db.fetch().items
-    st.dataframe(db_content)
+
