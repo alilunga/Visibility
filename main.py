@@ -7,7 +7,7 @@ from deta import Deta
 from accueil import accueilf
 from clients import clientsf
 from fournisseurs import fournisseursf
-from produits import *
+from produits import produitf
 from achats import achatsf
 from ventes import ventesf
 from analytiques import analytiquesf
