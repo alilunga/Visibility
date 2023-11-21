@@ -14,7 +14,7 @@ def produitsf():
         produit_pv = st.number_input("Entrez le prix de vente du produit")
         produit_stk = st.number_input("Entrez la quantite en stock du produit")
         produit_dmd = st.number_input("Entrez la quantite en demande du produit")
-        submitted = st.form_submit_button("Enregistrer")  
+        submitted_add = st.form_submit_button("Enregistrer")  
 
 def importf():
 
@@ -32,22 +32,22 @@ def importf():
         import_fconnex = st.number_input("Frais connexes :")
         import_paiement = st.text_input("Modalites de paiement")
         import_autres = st.text_input("Autres informations utiles :")
-        submitted = st.form_submit_button("Enregistrer")  
-
-def xxxf():
-    with st.form("form", clear_on_submit=True):
-
-        st.write ("Remplir")
-        name = st.text_input("Ton nom")
-        age = st.number_input("Ton age")
-        submitted = st.form_submit_button("Enregistrer")
+        submitted_upd = st.form_submit_button("Enregistrer")  
 
 
     deta = Deta(st.secrets["data_key"])
-    db = deta.Base("visible")
-    if submitted:
-        db.put({"name":name, "age":age})
+    db = deta.Base("produit")
+    if submitted_add:
+        db.put({"Numero": produit_id, 
+                "Nom": produit_nom, 
+                "Description": produit_des, 
+                "Image": produit_img,
+                "PA": produit_pa,
+                "PV": produit_pv,
+                "Qte en stock": produit_stk, 
+                "Qte en demande": produit_dmd})
 
     db_content = db.fetch().items
     st.write(db_content)
 
+ 
