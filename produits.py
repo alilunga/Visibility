@@ -17,7 +17,7 @@ def produitsf():
         submitted = st.form_submit_button("Enregistrer") 
        
    deta = Deta(st.secrets["data_key"])
-   db = deta.Base("produit")
+   db = deta.Base("visible")
    if submitted:
         db.put({"Numero": produit_id, 
                 "Nom": produit_nom, 
