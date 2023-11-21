@@ -16,9 +16,9 @@ def produitsf():
         produit_dmd = st.number_input("Entrez la quantite en demande du produit")
         submitted = st.form_submit_button("Enregistrer") 
        
-    deta = Deta(st.secrets["data_key"])
-    db = deta.Base("produit")
-    if submitted:
+   deta = Deta(st.secrets["data_key"])
+   db = deta.Base("produit")
+   if submitted:
         db.put({"Numero": produit_id, 
                 "Nom": produit_nom, 
                 "Description": produit_des, 
@@ -27,9 +27,8 @@ def produitsf():
                 "PV": produit_pv,
                 "Qte en stock": produit_stk, 
                 "Qte en demande": produit_dmd})
-
-        db_content = db.fetch().items
-        st.write(db_content)
+    db_content = db.fetch().items
+    st.write(db_content)
 
 def importf():
 
