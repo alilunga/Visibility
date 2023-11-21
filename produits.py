@@ -27,8 +27,8 @@ def produitsf():
                 "PV": produit_pv,
                 "Qte en stock": produit_stk, 
                 "Qte en demande": produit_dmd})
-    db_content = db.fetch().items
-    st.write(db_content)
+#    db_content = db.fetch().items
+#    st.write(db_content)
 
 def importf():
 
