@@ -35,19 +35,17 @@ def importf():
         submitted_upd = st.form_submit_button("Enregistrer")  
 
 
-    deta = Deta(st.secrets["data_key"])
-    db = deta.Base("produit")
-    if submitted_add:
-        db.put({"Numero": produit_id, 
-                "Nom": produit_nom, 
-                "Description": produit_des, 
-                "Image": produit_img,
-                "PA": produit_pa,
-                "PV": produit_pv,
-                "Qte en stock": produit_stk, 
-                "Qte en demande": produit_dmd})
+#    deta = Deta(st.secrets["data_key"])
+#    db = deta.Base("produit")
+#    if submitted_add:
+#        db.put({"Numero": produit_id, 
+#                "Nom": produit_nom, 
+#                "Description": produit_des, 
+#                "Image": produit_img,
+#                "PA": produit_pa,
+#                "PV": produit_pv,
+#                "Qte en stock": produit_stk, 
+#                "Qte en demande": produit_dmd})
 
-    db_content = db.fetch().items
-    st.write(db_content)
-
- 
+#    db_content = db.fetch().items
+#    st.write(db_content)
