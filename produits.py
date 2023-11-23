@@ -5,7 +5,7 @@ def produitsf():
     
    with st.form("produits", clear_on_submit=True):
 
-        st.write ("Ajouter un produit")
+        st.write ("Creer un produit")
         produit_id = st.number_input("Entrez le numero du produit")
         produit_nom = st.text_input("Entrez le nom du produit")
         produit_des = st.text_input("Entrez la description du produit")
