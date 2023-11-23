@@ -30,23 +30,23 @@ def produitsf():
         db_content = db.fetch().items
         st.write(db_content)
 
-def importf():
-
-      with st.form("import", clear_on_submit=True):
-
-        st.write ("Remplir sa Déclaration d’Importation des biens")
-        import_entree = st.number_input("Poste d'entree :")
-        import_origin = st.text_input("Pays de provenance des biens")
-        import_fournisseur = st.text_input("Nom du fournisseur etranger :")
-        import_contact = st.text_input("Contact du fournisseur etranger:")
-        import_beneficiaire = st.text_input("Nom du beneficiaire du paiement :")
-        import_bcontact = st.text_input("Contact du beneficiaire du paiement")
-        import_devise = st.number_input("Monnaie de la transaction :")
-        import_fob = st.number_input("Montant FOB/CIF a repartir")
-        import_fconnex = st.number_input("Frais connexes :")
-        import_paiement = st.text_input("Modalites de paiement")
-        import_autres = st.text_input("Autres informations utiles :")
-        submitted_upd = st.form_submit_button("Enregistrer")  
+#def importf():
+#
+#      with st.form("import", clear_on_submit=True):
+#
+#        st.write ("Remplir sa Déclaration d’Importation des biens")
+#        import_entree = st.number_input("Poste d'entree :")
+#        import_origin = st.text_input("Pays de provenance des biens")
+#        import_fournisseur = st.text_input("Nom du fournisseur etranger :")
+#        import_contact = st.text_input("Contact du fournisseur etranger:")
+#        import_beneficiaire = st.text_input("Nom du beneficiaire du paiement :")
+#        import_bcontact = st.text_input("Contact du beneficiaire du paiement")
+#        import_devise = st.number_input("Monnaie de la transaction :")
+#        import_fob = st.number_input("Montant FOB/CIF a repartir")
+#        import_fconnex = st.number_input("Frais connexes :")
+#        import_paiement = st.text_input("Modalites de paiement")
+#        import_autres = st.text_input("Autres informations utiles :")
+#        submitted_upd = st.form_submit_button("Enregistrer")  
 
 
 
