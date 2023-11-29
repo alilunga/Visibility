@@ -30,8 +30,8 @@ def produitsf():
         db_content = db.fetch().items
         st.write(db_content)
 
-#def importf():
-#
+def stockf():
+
 #      with st.form("import", clear_on_submit=True):
 #
 #        st.write ("Remplir sa Déclaration d’Importation des biens")
