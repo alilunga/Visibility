@@ -32,7 +32,7 @@ def stockf():
    deta = Deta(st.secrets["data_key"])
    db = deta.Base("visible")
    db_content = db.fetch().items
-   st.write(db_content)
+   st.dataframe(db_content)
 
 #      with st.form("import", clear_on_submit=True):
 #
