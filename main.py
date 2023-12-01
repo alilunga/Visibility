@@ -64,7 +64,7 @@ if authenticate_user():
     if selected == 'fournisseurs':
         fournisseursf()
     if selected == 'produits':
-        select_list=["Creer un produit", "Produits en stock", "Commander un produit", "Importer un produit"]
+        select_list=["Creer un produit", "Produits en stock", "Recetionner un produit", "Commander un produit", "Importer un produit"]
         ret = st.selectbox("Action", select_list)
         if ret == "Produits en stock":
             stockf()
