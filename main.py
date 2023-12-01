@@ -61,12 +61,14 @@ if authenticate_user():
         accueilf()
     if selected == 'clients':
         select_list=["Créer un client", "Liste des clients", "Mettre à jour un client"]
+        ret = st.selectbox("Action", select_list)
         if ret == "Créer un client":
             clientsf()
         else:
             clientsf()
     if selected == 'fournisseurs':
         select_list=["Créer un fournisseur", "Liste des fournisseurs", "Mettre à jour un fournisseur"]
+        ret = st.selectbox("Action", select_list)
         if ret == "Créer un fournisseur":
             fournisseursf()
         else:
