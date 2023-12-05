@@ -5,7 +5,6 @@ def produitsf():
     
    with st.form("produits", clear_on_submit=True):
 
-        st.write ("Créer un produit")
         produit_id = st.number_input("Entrez le numéro du produit")
         produit_nom = st.text_input("Entrez le nom du produit")
         produit_des = st.text_input("Entrez la description du produit")
@@ -17,7 +16,7 @@ def produitsf():
         submitted = st.form_submit_button("Enregistrer") 
        
    deta = Deta(st.secrets["data_key"])
-   db = deta.Base("visible")
+   db = deta.Base("produit")
    if submitted:
         db.put({"Numero": produit_id, 
                 "Nom": produit_nom, 
@@ -30,7 +29,7 @@ def produitsf():
  
 def stockf():
    deta = Deta(st.secrets["data_key"])
-   db = deta.Base("visible")
+   db = deta.Base("produit")
    db_content = db.fetch().items
    st.dataframe(db_content)
 
