@@ -24,7 +24,7 @@ def clientsf():
                 "Telephone": produit_pa,
                 "Email": produit_pv,
 
-def clientlstf():
+def clientlstf2():
     deta = Deta(st.secrets["data_key"])
     db = deta.Base("client")
     db_content = db.fetch().items
