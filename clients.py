@@ -13,9 +13,9 @@ def clientsf():
         submitted = st.form_submit_button("Enregistrer")
 
       
-   deta = Deta(st.secrets["data_key"])
-   db = deta.Base("client")
-   if submitted:
+    deta = Deta(st.secrets["data_key"])
+    db = deta.Base("client")
+    if submitted:
         db.put({"Numero": client_id, 
                 "Adresse": produit_nom, 
                 "Ville": produit_des, 
