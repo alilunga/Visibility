@@ -6,6 +6,7 @@ def clientsf():
     with st.form("clients", clear_on_submit=True):
 
         client_id = st.number_input("Entrez le numero du client")
+        client_nom = st.text_input("Entrez le nom du client")
         client_adr = st.text_input("Entrez l'addresse du client")
         client_vil = st.text_input("Entrez la ville du client")
         client_pay = st.text_input("Entrez le pays du client")
@@ -17,7 +18,8 @@ def clientsf():
     deta = Deta(st.secrets["data_key"])
     db = deta.Base("client")
     if submitted:
-        db.put({"Numero": client_id, 
+        db.put({"Numero": client_id,
+                "Nom": client_nom,
                 "Adresse": client_adr, 
                 "Ville": client_vil, 
                 "Pays": client_pay,
