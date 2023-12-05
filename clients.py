@@ -23,9 +23,3 @@ def clientsf():
                 "Pays": produit_img,
                 "Telephone": produit_pa,
                 "Email": produit_pv,
-
-def clientslstf():
-    deta = Deta(st.secrets["data_key"])
-        db = deta.Base("client")
-        db_content = db.fetch().items
-        st.dataframe(db_content)
