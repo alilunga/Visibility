@@ -29,5 +29,3 @@ def clientsf():
 #    db = deta.Base("client")
 #    db_content = db.fetch().items
 #    st.dataframe(db_content)
-  
-
