@@ -22,4 +22,4 @@ def clientsf():
                 "Ville": produit_des, 
                 "Pays": produit_img,
                 "Telephone": produit_pa,
-                "Email": produit_pv,
+                "Email": produit_pv})
