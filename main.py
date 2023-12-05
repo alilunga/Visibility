@@ -6,7 +6,7 @@ from deta import Deta
 
 from accueil import accueilf
 from clients import *
-from fournisseurs import fournisseursf
+from fournisseurs import *
 from produits import *
 from achats import achatsf
 from ventes import ventesf
