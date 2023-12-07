@@ -78,8 +78,14 @@ if authenticate_user():
         ret = st.selectbox("Sélectionner", select_list)
         if ret == "Produits en stock":
             stockf()
-        else:
+        elif ret == "Créer un produit":
             produitsf()
+        elif ret == "Récetionner un produit"
+            st.write("Under construction")
+        elif ret == "Commander un produit"
+            st.write("Under construction")
+        else:
+            st.write("Under construction")
     if selected == 'achats':
         achatsf()
     if selected == 'ventes':
