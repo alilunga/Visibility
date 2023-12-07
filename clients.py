@@ -26,5 +26,5 @@ def clientsf():
                 "Telephone": client_pho,
                 "Email": client_crl})
 
-def clientslstf:
+def clientslstf():
     st.write("Under construction")
