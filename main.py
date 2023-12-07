@@ -78,7 +78,7 @@ if authenticate_user():
         else:
             st.write("Under construction")
     if selected == 'produits':
-        select_list=["Créer un produit", "Produits en stock", "Récetionner un produit", "Commander un produit", "Importer un produit"]
+        select_list=["Créer un produit", "Produits en stock", "Réceptionner un produit", "Commander un produit", "Importer un produit"]
         ret = st.selectbox("Sélectionner", select_list)
         if ret == "Produits en stock":
             stockf()
