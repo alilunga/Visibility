@@ -64,15 +64,19 @@ if authenticate_user():
         ret = st.selectbox("Sélectionner", select_list)
         if ret == "Créer un client":
             clientsf()
+        elif ret == "Liste des clients":
+            st.write("Under construction")
         else:
-            clientslstf()
+            st.write("Under construction")
     if selected == 'fournisseurs':
         select_list=["Créer un fournisseur", "Liste des fournisseurs", "Mettre à jour un fournisseur"]
         ret = st.selectbox("Sélectionner", select_list)
         if ret == "Créer un fournisseur":
             fournisseursf()
+        elif ret == "Liste des fournisseurs":
+            st.write("Under construction")
         else:
-            fournisseursf()
+            st.write("Under construction")
     if selected == 'produits':
         select_list=["Créer un produit", "Produits en stock", "Récetionner un produit", "Commander un produit", "Importer un produit"]
         ret = st.selectbox("Sélectionner", select_list)
