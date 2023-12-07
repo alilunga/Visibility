@@ -80,9 +80,9 @@ if authenticate_user():
             stockf()
         elif ret == "Créer un produit":
             produitsf()
-        elif ret == "Récetionner un produit"
+        elif ret == "Récetionner un produit":
             st.write("Under construction")
-        elif ret == "Commander un produit"
+        elif ret == "Commander un produit":
             st.write("Under construction")
         else:
             st.write("Under construction")
