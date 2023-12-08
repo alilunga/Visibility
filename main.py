@@ -65,7 +65,7 @@ if authenticate_user():
         if ret == "Créer un client":
             clientsf()
         elif ret == "Liste des clients":
-            st.write("Under construction")
+            clientslstf()
         else:
             st.write("Under construction")
     if selected == 'fournisseurs':
