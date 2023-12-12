@@ -74,7 +74,7 @@ if authenticate_user():
         if ret == "Créer un fournisseur":
             fournisseursf()
         elif ret == "Liste des fournisseurs":
-            st.write("Under construction")
+            fournisseurslstf()
         else:
             st.write("Under construction")
     if selected == 'produits':
