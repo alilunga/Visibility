@@ -15,15 +15,15 @@ def fournisseursf():
         submitted = st.form_submit_button("Enregistrer")
 
 deta = Deta(st.secrets["data_key"])
-   db = deta.Base("fournisseur")
-   if submitted:
-        db.put({"Numero": fournisseur_id, 
-                "Nom": produit_nom, 
-                "Adresse": fournisseur_adr, 
-                "Ville": fournisseur_vil,
-                "Pays": fournisseur_pay,
-                "Telephone": fournisseur_pho,
-                "Email": fournisseur_crl})
+db = deta.Base("fournisseur")
+if submitted:
+   db.put({"Numero": fournisseur_id, 
+            "Nom": produit_nom, 
+            "Adresse": fournisseur_adr, 
+            "Ville": fournisseur_vil,
+            "Pays": fournisseur_pay,
+            "Telephone": fournisseur_pho,
+            "Email": fournisseur_crl})
  
 def fournisseurlstf():
    deta = Deta(st.secrets["data_key"])
