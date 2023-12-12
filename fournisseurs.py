@@ -2,8 +2,7 @@ import streamlit as st  # pip install streamlit
 
 
 def fournisseursf():
-    # --- INPUT & SAVE VALEURS DOUANE ---
-
+   
    with st.form("fournisseurs", clear_on_submit=True):
 
         st.write ("Ajouter un fournisseur")
