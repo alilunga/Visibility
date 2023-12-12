@@ -25,7 +25,7 @@ def fournisseursf():
               "Telephone": fournisseur_pho,
               "Email": fournisseur_crl})
  
-def fournisseurlstf():
+def fournisseurslstf():
    deta = Deta(st.secrets["data_key"])
    db = deta.Base("produit")
    db_content = db.fetch().items
