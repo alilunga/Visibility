@@ -33,6 +33,12 @@ def stockf():
    db_content = db.fetch().items
    st.dataframe(db_content)
 
+def produitsupdf():
+   deta = Deta(st.secrets["data_key"])
+   db = deta.Base("produit")
+   db_content = db.fetch()
+   st.dataframe(db_content)
+
 #      with st.form("import", clear_on_submit=True):
 #
 #        st.write ("Remplir sa Déclaration d’Importation des biens")
