@@ -85,7 +85,7 @@ if authenticate_user():
         elif ret == "Créer un produit":
             produitsf()
         elif ret == "Récetionner un produit":
-            st.write("Under construction")
+            produitsupdf()
         elif ret == "Commander un produit":
             st.write("Under construction")
         else:
