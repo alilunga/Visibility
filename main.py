@@ -59,7 +59,6 @@ if authenticate_user():
             )
 
     if selected == 'accueil':
-        accueilf()
         select_list=["Créer un utilisateur", "Liste des utilisateurs", "Mettre à jour un utilisateur"]
         ret = st.selectbox("Sélectionner", select_list)
         if ret == "Créer un utilisateur":
