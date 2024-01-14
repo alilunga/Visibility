@@ -28,7 +28,7 @@ def utilisateursf():
                 "Qte en stock": utilisateur_stk, 
                 "Qte en demande": utilisateur_dmd})
  
-def utilisateurlstf():
+def utilisateurslstf():
    deta = Deta(st.secrets["data_key"])
    db = deta.Base("utilisateur")
    db_content = db.fetch().items
