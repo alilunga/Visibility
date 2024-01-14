@@ -8,6 +8,7 @@ from accueil import accueilf
 from clients import *
 from fournisseurs import *
 from produits import *
+from utilisateurs import *
 from achats import achatsf
 from ventes import ventesf
 from analytiques import analytiquesf
