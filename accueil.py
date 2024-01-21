@@ -7,13 +7,9 @@ def utilisateursf():
    with st.form("utilisateurs", clear_on_submit=True):
 
         utilisateur_id = st.number_input("Entrez le numéro du utilisateur")
-        utilisateur_nom = st.text_input("Entrez le nom du utilisateur")
-        utilisateur_des = st.text_input("Entrez la description du utilisateur")
-        utilisateur_img = st.text_input("Télécharger l'image du utilisateur")
-        utilisateur_pa = st.number_input("Entrez le prix d'achat du utilisateur")
-        utilisateur_pv = st.number_input("Entrez le prix de vente du utilisateur")
-        utilisateur_stk = st.number_input("Entrez la quantité en stock du utilisateur")
-        utilisateur_dmd = st.number_input("Entrez la quantité en demande du utilisateur")
+        utilisateur_nom = st.text_input("Entrez le nom de l'utilisateur")
+        utilisateur_pass = st.text_input("Entrez le mot de pass de l'utilisateur")
+        utilisateur_img = st.text_input("Télécharger la photo de l'utilisateur")
         submitted = st.form_submit_button("Enregistrer") 
        
    deta = Deta(st.secrets["data_key"])
@@ -21,12 +17,8 @@ def utilisateursf():
    if submitted:
         db.put({"Numero": utilisateur_id, 
                 "Nom": utilisateur_nom, 
-                "Description": utilisateur_des, 
                 "Image": utilisateur_img,
-                "PA": utilisateur_pa,
-                "PV": utilisateur_pv,
-                "Qte en stock": utilisateur_stk, 
-                "Qte en demande": utilisateur_dmd})
+                "Passwd": utilisateur_pass})
  
 def utilisateurslstf():
    deta = Deta(st.secrets["data_key"])
